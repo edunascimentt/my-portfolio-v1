@@ -1,0 +1,59 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    background-color: #111111;
+    font-family: "Consolas", "Sans serif";
+    text-decoration: none;
+    color: #ffffff;
+}
+
+::selection {
+  background: #4200ad;
+}
+
+body {
+    height: 5000px;
+}
+
+li, a {
+    font-size: 25px;
+    list-style-type: none;
+}
+
+a:hover {
+    color: #4200ad;
+}
+
+header {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+}
+
+.nav-links {
+    font-size: 0px;
+}
+
+.nav-links li {
+    display: inline-block;
+    padding: 0px 10px;
+}
+
+nav {
+    padding: 0px 20px;
+}
+
+.about-card {
+    display: flex;
+    justify-content: center;
+}
+
+.about-details {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+    border: #4200ad, solid, 2px;
+    font-size: 0px;
+}
