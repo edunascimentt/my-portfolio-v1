@@ -2,10 +2,10 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    background-color: #111111;
     font-family: "Consolas", "Sans serif";
     text-decoration: none;
     color: #ffffff;
+    font-weight: 400;
 }
 
 ::selection {
@@ -14,10 +14,11 @@
 
 body {
     height: 5000px;
+    background-color: #111111;
 }
 
 li, a {
-    font-size: 25px;
+    font-size: 20px;
     list-style-type: none;
 }
 
@@ -26,34 +27,83 @@ a:hover {
 }
 
 header {
-    display:flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: transparent;
+    z-index: 1000;
+    display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 10%;
+    padding:  70px;
 }
 
 .nav-links {
     font-size: 0px;
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 12px 24px;
+    border-style: solid;
+    border-width: 0px;
+    border-radius: 17px;
+    color: #ffffff;
+    font-weight: bold;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
 .nav-links li {
     display: inline-block;
-    padding: 0px 10px;
-}
-
-nav {
-    padding: 0px 20px;
+    padding: 0px 23px;
+    background-color: transparent;
 }
 
 .about-card {
     display: flex;
     justify-content: center;
+    margin-top: 150px;
+}
+
+.card-col {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    border-style: solid;
+    border-width: 0px;
+    border-radius: 17px;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
 .about-details {
     display: flex;
     justify-content: space-between;
+    gap: 200px;
+    font-size: 25px;
+}
+
+.about-socials {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 0;
+    gap: 8px;
+}
+
+.about-location {
+    display: flex;
+    font-size: 16px;
+    color: #c0c0c0;
     gap: 5px;
-    border: #4200ad, solid, 2px;
-    font-size: 0px;
+    padding-left: 2px;
+}
+
+.about-socials img:hover {
+    transform: scale(1.2);
+}
+
+.about-description {
+    margin-top: 7px;
+    font-size: 18px;
 }
