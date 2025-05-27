@@ -109,9 +109,32 @@ header a {
     font-size: 18px;
 }
 
+.open-side-bar, .close-side-bar, .side-bar{
+    display: none;
+}
+
+#side-toggle {
+    display: none;
+}
+
 @media (max-width: 850px) {
-    .nav-links,
+    header a {
+    font-size: 17px;
+    }
+}
+
+@media (max-width: 725px) {
+    header a {
+    font-size: 20px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
     #language-selector {
         display: none;
     }
+
+
 }
