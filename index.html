@@ -9,13 +9,23 @@
 <body>
 
     <header>
-        <nav>
+        <div class="top-nav">
             <a href="index.html" id="logo">edunascimentt<span id="logo-dot">.</span></a>
-            <input type="checkbox" id="sidebar-active">
+
+            <div class="top-links">
+                <a href="aboutme.html">About me</a>
+                <a href="projects.html">Projects</a>
+                <a href="contact.html">Contact me</a>
+            </div>
+
+            <a href="#" id="language-selector-top">Português</a>
             <label for="sidebar-active" class="open-sidebar-button">
                 <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#e3e3e3"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
             </label>
 
+        </div>
+        <nav class="side-nav">
+            <input type="checkbox" id="sidebar-active" hidden>
             <label for="sidebar-active" id="overlay">
 
             </label>
@@ -27,7 +37,7 @@
                 <a href="aboutme.html">About me</a>
                 <a href="projects.html">Projects</a>
                 <a href="contact.html">Contact me</a>
-                <a href="#" id="language-selector">Português</a>
+                <a href="#" id="language-selector-side">Português</a>
             </div>
         </nav>
     </header>
