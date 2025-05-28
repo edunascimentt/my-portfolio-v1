@@ -2,7 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: Consolas, Segoe UI, sans-serif;
+    font-family: Consolas, Inconsolata, Roboto Mono, monospace, Montserrat, Monaco, sans-serif;
     font-weight: 400;
     color: #ffffff;
 }
