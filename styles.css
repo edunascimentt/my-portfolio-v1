@@ -180,21 +180,27 @@ body {
 
 .about-socials {
     display: flex;
+    align-items: center;
     justify-content: space-evenly;
     font-size: 0;
     gap: 8px;
 }
 
-.about-socials img:hover {
-    transform: scale(1.2);
+.social-svgs {
+    fill: #ffffff;
 }
 
 .about-location {
     display: flex;
+    align-items: center;
     font-size: 16px;
     color: #c0c0c0;
     gap: 5px;
     padding-left: 2px;
+}
+
+#location-logo {
+    fill: #c0c0c0;
 }
 
 .about-description {
