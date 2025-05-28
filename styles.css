@@ -7,6 +7,149 @@
     color: #ffffff;
 }
 
+:root {
+    --color-bg1: #111111;
+    --color1: #4200ad;
+    --color2: #270066;
+    --color3: #751fff;
+    --color4: #34087a;
+    --color5: #5600e0;
+    --circle-size: 80%;
+    --blending: hard-light;
+}
+
+@keyframes moveInCircle {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes moveVertical {
+    0% {
+        transform: translateY(-50%);
+    }
+    50% {
+        transform: translateY(50%);
+    }
+    100% {
+        transform: translateY(-50%);
+    }
+}
+
+@keyframes moveHorizontal {
+    0% {
+        transform: translateX(-50%) translateY(-10%);
+    }
+    50% {
+        transform: translateX(50%) translateY(10%);
+    }
+    100% {
+        transform: translateX(-50%) translateY(-10%);
+    }
+}
+
+    .gradient-bg {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    overflow: hidden;
+    background: linear-gradient(40deg, var(--color-bg1));
+    top: 0;
+    left: 0;
+    z-index: -1;
+    }
+
+    .bg-svg {
+        position: fixed;
+        top:0;
+        left:0;
+        width: 0;
+        height: 0;
+    }
+
+
+    .gradients-container {
+        filter: url(#goo) blur(40px) ;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+
+.g1 {
+    position: absolute;
+    background: radial-gradient(circle at center, var(--color1), transparent 50%) no-repeat;
+    mix-blend-mode: var(--blending);
+    width: var(--circle-size);
+    height: var(--circle-size);
+    top: calc(50% - var(--circle-size) / 2);
+    left: calc(50% - var(--circle-size) / 2);
+    transform-origin: center center;
+    animation: moveVertical 30s ease infinite;
+    opacity: 1;
+}
+
+.g2 {
+    position: absolute;
+    background: radial-gradient(circle at center, var(--color2), transparent 50%) no-repeat;
+    mix-blend-mode: var(--blending);
+    width: var(--circle-size);
+    height: var(--circle-size);
+    top: calc(50% - var(--circle-size) / 2);
+    left: calc(50% - var(--circle-size) / 2);
+    transform-origin: calc(50% - 400px);
+    animation: moveInCircle 20s reverse infinite;
+    opacity: 1;
+}
+
+.g3 {
+    position: absolute;
+    background: radial-gradient(circle at center, var(--color3), transparent 50%) no-repeat;
+    mix-blend-mode: var(--blending);
+    width: var(--circle-size);
+    height: var(--circle-size);
+    top: calc(50% - var(--circle-size) / 2 + 200px);
+    left: calc(50% - var(--circle-size) / 2 - 500px);
+    transform-origin: calc(50% + 400px);
+    animation: moveInCircle 40s linear infinite;
+    opacity: 1;
+}
+
+.g4 {
+    position: absolute;
+    background: radial-gradient(circle at center, var(--color4), transparent 50%) no-repeat;
+    mix-blend-mode: var(--blending);
+    width: var(--circle-size);
+    height: var(--circle-size);
+    top: calc(50% - var(--circle-size) / 2);
+    left: calc(50% - var(--circle-size) / 2);
+    transform-origin: calc(50% - 200px);
+    animation: moveHorizontal 40s ease infinite;
+    opacity: 0.7;
+}
+
+.g5 {
+    position: absolute;
+    background: radial-gradient(circle at center, var(--color5), transparent 50%) no-repeat;
+    mix-blend-mode: var(--blending);
+    width: calc(var(--circle-size) * 2);
+    height: calc(var(--circle-size) * 2);
+    top: calc(50% - var(--circle-size));
+    left: calc(50% - var(--circle-size));
+    transform-origin: calc(50% - 800px) calc(50% + 200px);
+    animation: moveInCircle 20s ease infinite;
+    opacity: 1;
+}
+
+body {
+    background: #111111;
+}
+
 ::selection {
     background: #4200ad;
 }
@@ -39,6 +182,7 @@ header {
     left: 0;
     z-index: 8;
     width: 100%;
+    background-color: #1111117c;
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
 }
@@ -129,11 +273,11 @@ header {
     }
 
     .side-nav {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    height: 60px;
-}   
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        height: 60px;
+    }
 
     .side-nav a {
         box-sizing: border-box;
@@ -149,8 +293,8 @@ header {
     }
 
     .close-sidebar-button {
-    display: block;
-    padding: 20px;
+        display: block;
+        padding: 20px;
     }
 
     #sidebar-active:checked ~ .links-container {
@@ -172,11 +316,6 @@ header {
     }
 }
 
-body {
-    height: 5000px;
-    background: #111111;
-}
-
 .about-card {
     display: flex;
     justify-content: center;
@@ -192,6 +331,7 @@ body {
     padding: 15px;
     box-shadow: 0 0 10px rgba(255,255,255,0.5);
     transition: transform 0.1s ease-in-out;
+    background-color: #1111117c;
 }
 
 .card-col:hover {
