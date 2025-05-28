@@ -104,7 +104,14 @@ header {
     display: none;
 }
 
+@media (max-width: 4000px) {
+    main {
+        padding-top: 100px;
+    }
+}
+
 @media (max-width: 850px) {
+
     .top-links, #language-selector-top {
         display: none;
     }
@@ -161,15 +168,15 @@ header {
         backdrop-filter: blur(3px);
         transition: 2s ease-out;
     }
+
+    main {
+        padding-top: 40px;
+    }
 }
 
 body {
     height: 5000px;
     background: #111111;
-}
-
-main {
-    padding-top: 100px;
 }
 
 .about-card {
