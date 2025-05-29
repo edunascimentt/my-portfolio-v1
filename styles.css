@@ -9,12 +9,13 @@
 
 :root {
     --color-bg1: #111111;
+    --color-bg2: #000000;
     --color1: #4200ad;
     --color2: #270066;
-    --color3: #751fff;
+    --color3: #4855cc;
     --color4: #34087a;
-    --color5: #5600e0;
-    --circle-size: 80%;
+    --color5: #2d1752;
+    --circle-size: 70%;
     --blending: hard-light;
 }
 
@@ -59,7 +60,7 @@
     height: 100vh;
     position: absolute;
     overflow: hidden;
-    background: linear-gradient(40deg, var(--color-bg1));
+    background: linear-gradient(40deg, var(--color-bg2,), var(--color-bg1));
     top: 0;
     left: 0;
     z-index: -1;
@@ -75,7 +76,7 @@
 
 
     .gradients-container {
-        filter: url(#goo) blur(40px) ;
+        filter: url(#goo) blur(50px) ;
         width: 100%;
         height: 100%;
         z-index: -1;
@@ -277,7 +278,7 @@ header {
     }
 }
 
-@media (max-width: 850px) {
+@media (max-width: 1150px) {
 
     .top-links, #language-selector-top {
         display: none;
