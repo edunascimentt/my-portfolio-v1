@@ -15,7 +15,7 @@
     --color3: #4855cc;
     --color4: #34087a;
     --color5: #2d1752;
-    --circle-size: 70%;
+    --circle-size: 80%;
     --blending: hard-light;
 }
 
@@ -76,7 +76,7 @@
 
 
     .gradients-container {
-        filter: url(#goo) blur(50px) ;
+        filter: url(#goo) blur(40px) ;
         width: 100%;
         height: 100%;
         z-index: -1;
