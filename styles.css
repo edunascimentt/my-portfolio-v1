@@ -8,8 +8,12 @@
 }
 
 :root {
-    --color-bg1: #111111;
-    --color-bg2: #000000;
+    --color-bg1: #0c0113;
+    --color-bg2: #06040c;
+    --color-bg3: #0c001f;
+	--color-bg1-alt: #ffffff;
+    --color-bg2-alt: #7c7c7c;
+    --color-bg3-alt: #dbdbdb;
     --color1: #4200ad;
     --color2: #270066;
     --color3: #4855cc;
@@ -60,7 +64,7 @@
     height: 100vh;
     position: absolute;
     overflow: hidden;
-    background: linear-gradient(40deg, var(--color-bg2,), var(--color-bg1));
+    background: linear-gradient(40deg, var(--color-bg2), var(--color-bg1), var(--color-bg3));
     top: 0;
     left: 0;
     z-index: -1;
@@ -241,7 +245,18 @@ header {
 }
 
 .top-links a {
+    display: flex;
+    align-items: center;
     font-size: 23px;
+    gap: 5px;
+}
+
+.top-links a:hover svg {
+    stroke: #4200ad;
+}
+
+.side-nav a:hover svg {
+  stroke: #4200ad;
 }
 
 .side-nav {
@@ -253,6 +268,7 @@ header {
 .side-nav a {
     display: flex;
     align-items: center;
+    justify-content: center;
     height: 100%;
     padding: 0 20px;
     text-decoration: none;
@@ -291,7 +307,8 @@ header {
         top: 0;
         right: -100%;
         z-index: 10;
-        width: 170px;
+        width: 180px;
+        background-color: #1111117c;
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);
         box-shadow: 0 0 10px rgba(255,255,255,0.5);
@@ -306,9 +323,12 @@ header {
     }
 
     .side-nav a {
+        display: flex;
+        align-items: center;
         box-sizing: border-box;
         height: auto;
         width: 100%;
+        gap: 5px;
         padding: 20px 30px;
         justify-content: flex-start;
     }
