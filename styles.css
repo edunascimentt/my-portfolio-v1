@@ -62,12 +62,13 @@
     .gradient-bg {
     width: 100vw;
     height: 100vh;
-    position: absolute;
+    position: absolute; /*Change to fixed for static background on scroll*/
     overflow: hidden;
     background: linear-gradient(40deg, var(--color-bg2), var(--color-bg1), var(--color-bg3));
     top: 0;
     left: 0;
     z-index: -1;
+        box-shadow: 0 0 10px #4200ad;
     }
 
     .bg-svg {
@@ -178,6 +179,7 @@
 
 body {
     background: #111111;
+    height: 5000px;
 }
 
 ::selection {
@@ -227,7 +229,7 @@ header {
     z-index: 8;
     padding-left: 50px;
     padding-right: 50px;
-    box-shadow: 0 0 10px rgba(255,255,255,0.5);
+    box-shadow: 0 0 10px #4200ad;
     font-size: 20px;
 }
 
@@ -247,7 +249,7 @@ header {
 .top-links a {
     display: flex;
     align-items: center;
-    font-size: 23px;
+    font-size: 25px;
     gap: 5px;
 }
 
@@ -272,7 +274,7 @@ header {
     height: 100%;
     padding: 0 20px;
     text-decoration: none;
-    font-size: 23px;
+    font-size: 25px;
 }
 
 .links-container {
@@ -291,6 +293,16 @@ header {
 @media (max-width: 4000px) {
     main {
         padding-top: 100px;
+    }
+}
+
+@media (max-width: 945px) {
+    .scroll-indicator {
+        display: none !important;
+    }
+
+    .about-card {
+        margin: 0px 20px 0 20px !important;
     }
 }
 
@@ -365,12 +377,19 @@ header {
     main {
         padding-top: 40px;
     }
+
+    .side-nav a svg {
+        width: 15px !important;
+        height: 15px !important;
+        min-width: 15px;
+        min-height: 15px;
+    }
 }
 
 .about-card {
     display: flex;
     justify-content: center;
-    margin: 0px 20px 0 20px;
+    margin: 200px 20px 0 20px;
 }
 
 .card-col {
@@ -380,20 +399,20 @@ header {
     border: 0;
     border-radius: 15px;
     padding: 15px;
-    box-shadow: 0 0 10px rgba(255,255,255,0.5);
+    box-shadow: 0 0 10px #4200ad;
     transition: transform 0.1s ease-in-out;
     background-color: #1111117c;
 }
 
-.card-col:hover {
+/* .card-col:hover {
     transform: scale(1.01);
-}
+} */
 
 .about-details {
     display: flex;
     justify-content: space-between;
     gap: 35px;
-    font-size: 25px;
+    font-size: 30px;
 }
 
 .about-socials {
@@ -423,5 +442,49 @@ header {
 
 .about-description {
     margin-top: 7px;
+    font-size: 20px;
+}
+
+#cv-button {
+    width: 200px;
+    height: 40px;
+    margin-top: 15px;
+    border: solid;
+    border-width: 1px;
+    border-color: #4200ad;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #4200ad;
+    background-color: #00000000;
     font-size: 18px;
+    cursor: pointer;
+}
+
+#cv-button:hover {
+    background-color: #4200ad;
+}
+
+.scroll-indicator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 280px;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+
+#scroll-arrow {
+    stroke: #ffffff;
+    cursor: default;
+    animation: scroll-bounce 1.2s infinite;
+}
+
+@keyframes scroll-bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(18px);
+    }
 }
