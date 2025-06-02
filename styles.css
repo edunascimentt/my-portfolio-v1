@@ -18,7 +18,7 @@
     --color2: #270066;
     --color3: #4855cc;
     --color4: #34087a;
-    --color5: #2d1752;
+    --color5: #8368fa;
     --circle-size: 80%;
     --blending: hard-light;
 }
@@ -323,7 +323,7 @@ header {
         background-color: #1111117c;
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);
-        box-shadow: 0 0 10px rgba(255,255,255,0.5);
+        box-shadow: 0 0 10px #4200ad;
         transition: .50s ease-out;
     }
 
@@ -384,12 +384,16 @@ header {
         min-width: 15px;
         min-height: 15px;
     }
+
+    .skills-experience-container {
+        flex-direction: column;
+    }
 }
 
 .about-card {
     display: flex;
     justify-content: center;
-    margin: 200px 20px 0 20px;
+    margin: 0px 20px 0 20px;
 }
 
 .card-col {
@@ -403,10 +407,6 @@ header {
     transition: transform 0.1s ease-in-out;
     background-color: #1111117c;
 }
-
-/* .card-col:hover {
-    transform: scale(1.01);
-} */
 
 .about-details {
     display: flex;
@@ -423,8 +423,16 @@ header {
     gap: 8px;
 }
 
+.about-name {
+    font-weight: bold;
+}
+
 .social-svgs {
     fill: #ffffff;
+}
+
+.social-svgs:hover {
+    fill: #4200ad;
 }
 
 .about-location {
@@ -438,6 +446,7 @@ header {
 
 #location-logo {
     fill: #c0c0c0;
+    cursor: default;
 }
 
 .about-description {
@@ -446,7 +455,7 @@ header {
 }
 
 #cv-button {
-    width: 200px;
+    width: 150px;
     height: 40px;
     margin-top: 15px;
     border: solid;
@@ -463,12 +472,114 @@ header {
     background-color: #4200ad;
 }
 
+.skills-experience-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    gap: 20px;
+}
+
+.skills-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 430px;
+    height: 450px;
+    padding: 10px;
+    margin-left: 20px;
+    border: solid;
+    border-width: 1px;
+    border-color: #4200ad;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #4200ad;
+    background-color: #1111117c;
+}
+
+.experience-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 450px;
+    height: 450px;
+    padding: 10px;
+    margin-right: 20px;
+    border: solid;
+    border-width: 1px;
+    border-color: #4200ad;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #4200ad;
+    background-color: #1111117c;
+}
+
+.frontend-skills-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.backend-skills-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.database-skills-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.skill-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.skill-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width:80px;
+    height: 65px;
+    border: solid;
+    border-width: 1px;
+    border-color: #4200ad;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #4200ad;
+    background-color: #1111117c;
+    font-family: Montserrat;
+    font-size: 13px;
+    font-weight: 650;
+    cursor: pointer;
+}
+
+.skill-details:hover {
+    transform: scale(1.1);
+    transition: transform 0.1s ease-in-out;
+}
+
+.skills-container h1 {
+    font-size: 30px; /* or any size you want */
+    font-weight: bold;
+}
+
+/* Scroll indicator -------------------------- */
 .scroll-indicator {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 280px;
+    margin-top: 330px;
     user-select: none;
     -webkit-user-select: none;
     -moz-user-select: none;
