@@ -62,7 +62,7 @@
     .gradient-bg {
     width: 100vw;
     height: 100vh;
-    position: absolute; /*Change to fixed for static background on scroll*/
+    position: fixed; /*Change to fixed for static background on scroll*/
     overflow: hidden;
     background: linear-gradient(40deg, var(--color-bg2), var(--color-bg1), var(--color-bg3));
     top: 0;
@@ -485,10 +485,10 @@ header {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    width: 430px;
-    height: 450px;
-    padding: 10px;
+    width: 440px;
+    height: 565px;
     margin-left: 20px;
+    padding: 10px;
     border: solid;
     border-width: 1px;
     border-color: #4200ad;
@@ -500,12 +500,12 @@ header {
 .experience-container {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-evenly;
     align-items: center;
-    width: 450px;
-    height: 450px;
-    padding: 10px;
+    width: 440px;
+    height: 565px;
     margin-right: 20px;
+    padding: 10px;
     border: solid;
     border-width: 1px;
     border-color: #4200ad;
@@ -550,7 +550,7 @@ header {
     align-items: center;
     gap: 10px;
     width:80px;
-    height: 65px;
+    padding: 5px;
     border: solid;
     border-width: 1px;
     border-color: #4200ad;
@@ -559,7 +559,6 @@ header {
     background-color: #1111117c;
     font-family: Montserrat;
     font-size: 13px;
-    font-weight: 650;
     cursor: pointer;
 }
 
@@ -568,9 +567,50 @@ header {
     transition: transform 0.1s ease-in-out;
 }
 
-.skills-container h1 {
-    font-size: 30px; /* or any size you want */
-    font-weight: bold;
+.skills-experience-container h1 {
+    font-size: 30px;
+}
+
+.skills-container h2 {
+    font-size: 20px;
+}
+
+.jobs-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.experience {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    padding: 10px;
+    width: 410px;
+    border: solid;
+    border-width: 1px;
+    border-color: #4200ad;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #4200ad;
+    background-color: #1111117c;
+    font-family: Montserrat;
+}
+
+.experience h3 {
+    font-size: 20px;
+}
+
+.experience h4 {
+    color: #c0c0c0;
+}
+
+.experience h5 {
+    font-family: Montserrat;
+    font-size: 13px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 /* Scroll indicator -------------------------- */
