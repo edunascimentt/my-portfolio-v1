@@ -399,7 +399,7 @@ header {
 .card-col {
     display: flex;
     flex-direction: column;
-    width: 750px;
+    width: 1000px;
     border: 0;
     border-radius: 15px;
     padding: 15px;
@@ -449,6 +449,10 @@ header {
     margin-top: 13px;
 }
 
+.bold-text {
+    font-weight: bold;
+}
+
 #cv-button {
     width: 150px;
     height: 40px;
@@ -468,17 +472,18 @@ header {
     transition: transform 0.1s ease-in-out;
 }
 
-.quick-skills {
+.quick-skill-experience-center {
     display: flex;
     justify-content: center;
     margin: 20px 20px 0 20px;
+    gap: 20px;
 }
 
-.quick-skills-column {
+.quick-skill-experience-column {
     display: flex;
     flex-direction: column;
     width: 100%;
-    max-width: 750px;
+    max-width: 490px;
     border: 0;
     border-radius: 15px;
     padding: 15px;
@@ -491,12 +496,12 @@ header {
     display: flex;
     flex-direction: row;
     align-content: center; 
-    justify-content: space-evenly;
-    gap: 20px;
+    justify-content: center;
+    gap: 10px;
     flex-wrap: wrap;
 }
 
-.skill-details {
+.quick-skill-block {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -515,15 +520,40 @@ header {
     cursor: default;
 }
 
-.skill-details svg {
+.quick-skill-block svg {
     cursor: default;
 }
 
-.quick-skills-container {
+@media (max-width: 765px) {
+    .quick-skill-experience-center {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .quick-skill-experience-column {
+        width: 100%;
+        max-width: 765px;
+    }
+}
+
+@media (max-width: 600px) {
+    .quick-skill-block {
+        width: 75px !important;
+        font-size: 12px !important;
+    }
+
+    .quick-skill-block svg {
+        width: 40px !important;
+        height: 40px !important;
+    }
+}
+
+.quick-skill-experience-container {
     margin-top: 13px;
 }
 
-#more-skills-button {
+#more-skill-button {
     width: 150px;
     height: 40px;
     margin-top: 13px;
@@ -536,7 +566,7 @@ header {
     cursor: pointer;
 }
 
-#more-skills-button:hover {
+#more-skill-button:hover {
     background-color: #4200ad;
     transform: scale(1.1);
     transition: transform 0.1s ease-in-out;
