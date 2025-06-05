@@ -306,6 +306,10 @@ header {
 }
 
 @media (max-width: 1150px) {
+    .top-nav {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 
     .top-links, #language-selector-top {
         display: none;
