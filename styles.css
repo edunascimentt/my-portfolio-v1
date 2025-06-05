@@ -3,7 +3,6 @@
     margin: 0;
     padding: 0;
     font-family: Consolas, Inconsolata, Roboto Mono, monospace, Montserrat, Monaco, sans-serif;
-    font-weight: 400;
     color: #ffffff;
 }
 
@@ -292,7 +291,7 @@ header {
 
 @media (max-width: 4000px) {
     main {
-        padding-top: 100px;
+        padding-top: 85px;
     }
 }
 
@@ -375,7 +374,7 @@ header {
     }
 
     main {
-        padding-top: 40px;
+        padding-top: 20px;
     }
 
     .side-nav a svg {
@@ -410,8 +409,7 @@ header {
 
 .about-details {
     display: flex;
-    justify-content: space-between;
-    gap: 35px;
+    justify-content: space-between; 
 }
 
 .about-socials {
@@ -445,7 +443,7 @@ header {
     cursor: default;
 }
 
-.about-description {
+.description {
     margin-top: 13px;
 }
 
@@ -464,6 +462,10 @@ header {
     box-shadow: 0 0 10px #4200ad;
     background-color: #1111117c;
     cursor: pointer;
+}
+
+#cv-button h3 {
+font-weight: bold;
 }
 
 #cv-button:hover {
@@ -553,19 +555,21 @@ header {
     margin-top: 13px;
 }
 
+.quick-skill-experience-container a:hover {
+    transform: none;
+}
+
 .quick-experience-column {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: center;
     gap: 10px;
 }
 
 .quick-experience-block {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     width:100%;
     padding: 5px;
     border: solid;
@@ -575,8 +579,21 @@ header {
     box-shadow: 0 0 10px #4200ad;
     background-color: #1111117c;
     font-size: 15px;
-    font-weight: 700;
     cursor: default;
+}
+
+.quick-experience-name span {
+    font-size: 20px ;
+}
+
+.quick-experience-details {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.date {
+    color: #c0c0c0;
 }
 
 #more-skill-button, #more-experiences-button {
@@ -592,6 +609,10 @@ header {
     cursor: pointer;
 }
 
+#more-skill-button h3, #more-experiences-button h3 {
+    font-weight: bold;
+}
+
 #more-skill-button:hover, #more-experiences-button:hover {
     background-color: #4200ad;
     transform: scale(1.1);
@@ -604,7 +625,7 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 330px;
+    margin-top: 150px;
     user-select: none;
     -webkit-user-select: none;
     -moz-user-select: none;
