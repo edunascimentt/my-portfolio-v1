@@ -454,8 +454,6 @@ header {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    width: 100%;
-    max-width: 1000px;
     padding: 15px;
     margin-left: 20px;
     margin-right: 20px;
@@ -466,17 +464,26 @@ header {
     gap: 10px;
 }
 
+.quick-projects-row {
+    display: flex;
+    gap: 10px;
+}
+
 .quick-project-block {
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    width: 300px;
-    height: 400px;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
     padding: 10px;
+    gap: 10px;
     border-radius: 15px;
     box-shadow: 0 0 5px #4200ad;
     background-color: #1111117c;
+}
+
+.quick-project-block img {
+    width: 200px;
+    border-radius: 15px;
 }
 
 /* .scroll-indicator {
