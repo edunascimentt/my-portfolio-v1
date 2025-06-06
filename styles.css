@@ -258,7 +258,6 @@ header {
     display: flex;
     flex-direction: column;
     width: 1000px;
-    border: 0;
     border-radius: 15px;
     padding: 15px;
     box-shadow: 0 0 5px #4200ad;
@@ -315,7 +314,7 @@ header {
     width: 150px;
     height: 40px;
     margin-top: 13px;
-    border: solid 1px #4200ad;
+    border: solid 0px #4200ad;
     border-radius: 8px;
     box-shadow: 0 0 5px #4200ad;
     background-color: #1111117c;
@@ -344,7 +343,6 @@ header {
     flex-direction: column;
     width: 100%;
     max-width: 490px;
-    border: 0;
     border-radius: 15px;
     padding: 15px;
     box-shadow: 0 0 5px #4200ad;
@@ -369,7 +367,6 @@ header {
     gap: 10px;
     width: 100px;
     padding: 5px;
-    border: solid 1px #4200ad;
     border-radius: 8px;
     box-shadow: 0 0 5px #4200ad;
     background-color: #1111117c;
@@ -402,8 +399,7 @@ header {
     flex-direction: column;
     align-items: flex-start;
     width: 100%;
-    padding: 5px;
-    border: solid 1px #4200ad;
+    padding: 10px;
     border-radius: 8px;
     box-shadow: 0 0 5px #4200ad;
     background-color: #1111117c;
@@ -425,12 +421,11 @@ header {
     color: #c0c0c0;
 }
 
-#more-skill-button,
-#more-experiences-button {
+#more-skill-button, #more-experiences-button {
     width: 150px;
     height: 40px;
     margin-top: 13px;
-    border: solid 1px #4200ad;
+    border: solid 0px #4200ad;
     border-radius: 8px;
     box-shadow: 0 0 5px #4200ad;
     background-color: #1111117c;
@@ -447,12 +442,49 @@ header {
     transition: transform 0.1s ease-in-out;
 }
 
-.scroll-indicator {
+.quick-projects-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.quick-projects-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    max-width: 1000px;
+    padding: 15px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 5px #4200ad;
+    transition: transform 0.1s ease-in-out;
+    background-color: #1111117c;
+    gap: 10px;
+}
+
+.quick-project-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 300px;
+    height: 400px;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0 0 5px #4200ad;
+    background-color: #1111117c;
+}
+
+/* .scroll-indicator {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 35px;
+    margin-top: 17px;
     user-select: none;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -462,7 +494,7 @@ header {
     stroke: #ffffff;
     cursor: default;
     animation: scroll-bounce 1.2s infinite;
-}
+} */
 
 @media (max-width: 4000px) {
     main { padding-top: 85px; }
