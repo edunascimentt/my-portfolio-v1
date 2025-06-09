@@ -139,7 +139,6 @@
 
 body {
     background: #111111;
-    height: 5000px;
 }
 
 ::selection {
@@ -452,6 +451,7 @@ a button, a button h3, a {
     justify-content: center;
     align-items: center;
     margin-top: 20px;
+    margin-bottom: 40px;
 }
 
 .quick-projects-column {
@@ -496,6 +496,13 @@ a button, a button h3, a {
 .project-skills svg {
     cursor: default;
     width: 30px;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
 }
 
 @media (max-width: 4000px) {
