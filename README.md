@@ -8,8 +8,6 @@ This repository contains my personal developer portfolio, showcasing my skills, 
 
 The portfolio is built using modern web technologies and best practices, emphasizing performance, accessibility, and user experience. Feel free to explore the code, view the deployed site, or reach out for collaboration!
 
-## Getting Started
-
 ## License
 
 This project is licensed under the MIT License.
