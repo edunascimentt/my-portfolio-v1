@@ -8,15 +8,6 @@ This repository contains my personal developer portfolio, showcasing my skills, 
 
 The portfolio is built using modern web technologies and best practices, emphasizing performance, accessibility, and user experience. Feel free to explore the code, view the deployed site, or reach out for collaboration!
 
----
-
-**Tech Stack:**    
-- Frontend: React / Next.js / Vue / Svelte / HTML5 / CSS3 / JavaScript / TypeScript  
-- Styling: Tailwind CSS / Sass / Styled Components  
-- Deployment: Vercel / Netlify / GitHub Pages
-
----
-
 ## Getting Started
 
 ## License
