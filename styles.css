@@ -304,51 +304,26 @@ header {
     font-weight: bold;
 }
 
-#cv-button {
-    width: 150px;
-    height: 40px;
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
     margin-top: 13px;
+    height: 40px;
+    background-color: #1111117c;
+    box-shadow: 0 0 5px #4200ad;
     border: solid 0px #4200ad;
     border-radius: 8px;
-    box-shadow: 0 0 5px #4200ad;
-    background-color: #1111117c;
-    cursor: pointer;
-}
-
-#cv-button, #more-skill-button, #more-experiences-button {
-    width: 150px;
-    height: 40px;
-    margin-top: 13px;
-    border: solid 0px #4200ad;
-    border-radius: 8px;
-    box-shadow: 0 0 5px #4200ad;
-    background-color: #1111117c;
     cursor: pointer;
     transition: transform 0.1s ease-in-out, background-color 0.1s;
     transform-origin: center;
     will-change: transform;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     overflow: hidden;
-    padding: 0;
 }
 
-#cv-button h3, #more-skill-button h3, #more-experiences-button h3 {
-    font-weight: bold;
-    width: 100%;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-}
-
-a button, a button h3, a {
-    text-decoration: none !important;
-}
-
-#cv-button:hover, #more-skill-button:hover, #more-experiences-button:hover {
+button:hover {
     background-color: #4200ad;
-    transform: scale(1.1);
 }
 
 .quick-skill-experience-center {
@@ -493,6 +468,17 @@ a button, a button h3, a {
     width: 30px;
 }
 
+a > button {
+    display: block;
+    width: 100%;
+}
+
+a:has(> button) {
+    display: inline-block;
+    width: auto;
+    text-decoration: none !important;
+}
+
 footer {
     display: flex;
     align-items: center;
@@ -500,6 +486,15 @@ footer {
     margin: 20px;
     padding-left: 20px;
     padding-right: 20px;
+}
+
+.fade {
+    animation: fade 0.5s ease;
+}
+
+@keyframes fade {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 @media (max-width: 4000px) {
